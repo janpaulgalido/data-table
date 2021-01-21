@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="js/index.js"></script>
+
+		<title>User Input | PHP CRUD with AJAX</title>
+	</head>
+	<body>
+		<div class="container flex grid" id="data">
+			<div class="form_data">
+				<div class="alert">
+					<span class="close_btn">&times</span>
+					<h3 id="msg"></h3>
+				</div>
+				<form class="user_form">
+					<input type="text" id="hidden" style="display: none" />
+					<input
+						class="user_input"
+						id="name"
+						name="name"
+						type="text"
+						placeholder="Name"
+						autocomplete="off"
+					/>
+					<input
+						class="user_input"
+						id="country"
+						type="text"
+						name="country"
+						placeholder="Country"
+						autocomplete="off"
+					/>
+					<input
+						class="user_input"
+						id="gender"
+						type="text"
+						name="gender"
+						placeholder="Gender"
+						autocomplete="off"
+					/>
+					<input
+						type="submit"
+						class="btn form_btn shadow"
+						id="add_data_btn"
+						value="Save"
+					/>
+				</form>
+			</div>
+			<div class="table_container">
+				<table class="user_table shadow">
+					<thead>
+						<tr>
+							<th class="row_id">ID</th>
+							<th class="row_name">Name</th>
+							<th class="row_country">Country</th>
+							<th class="row_gender">Gender</th>
+							<th class="row_date">Date Created</th>
+							<th class="row_update">Update</th>
+							<th class="row_delete">Delete</th>
+						</tr>
+					</thead>
+					<tbody id="tbody"></tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+			getData();
+
+			document
+				.getElementById('add_data_btn')
+				.addEventListener('click', postData);
+			document
+				.querySelector('.close_btn')
+				.addEventListener('click', closeAlert);
+		</script>
+	</body>
+</html>
