@@ -8,3 +8,8 @@ This is a dynamic table that reads data from the database using AJAX vanilla Jav
 
 ## Requirements
 - XAMPP v8 with PHP 7 or 8
+
+### Images
+![Desktop size](https://github.com/janpaulgalido/data-table/blob/master/img/desktop.jpg)
+![Desktop size](https://github.com/janpaulgalido/data-table/blob/master/img/tablet.jpg)
+![Desktop size](https://github.com/janpaulgalido/data-table/blob/master/img/mobile.jpg)
